@@ -1,0 +1,6 @@
+rg            = "rg-gpk140224-tf-mi"
+vnet          = "vnet-10.0.0.0-20-tf"
+subnet        = "10.0.0.0-29-tf-sn"
+vm            = "vm-tf-ado-linux"
+computer_name = "garrard"
+sa            = "sagpk140214tf"
