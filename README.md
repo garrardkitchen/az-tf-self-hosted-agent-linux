@@ -5,9 +5,10 @@ This Terraform IaC deploys and configures an Azure DevOps self-hosted linux agen
 - Does not allow blob public access
 - Does not allow Shared Key Access
 - Uses Managed Identity
+- Private Endpoints
 
 In the next release, it will support:
-- Private Endpoints
+
 - SA be in a different RG
 
 This is another repo, that you can use, to prove that this deployment is successful:
@@ -78,7 +79,7 @@ tail -n50 /var/log/cloud-init-output.log
 
 # Todo
 
-- Private Endpoints (publicNetworkAccess = false)
+- Private Endpoints (publicNetworkAccess = false) - done
 - Allow for SA being in a different RG
 - Pass url of agent release into user_data
 
