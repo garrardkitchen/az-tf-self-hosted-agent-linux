@@ -5,7 +5,7 @@ This Terraform IaC deploys and configures an Azure DevOps self-hosted linux agen
 - Does not allow blob public access
 - Does not allow Shared Key Access
 - Uses Managed Identity
-- Private Endpoints
+- Use Private Endpoints so SA can be configured with no public network access
 
 In the next release, it will support:
 
@@ -33,7 +33,6 @@ This is another repo, that you can use, to prove that this deployment is success
 ```powershell
 get-date; 
 tf apply -var-file="tfvars/uks.tfvars" 
-  -var="pat=<ado_pat>" 
   -var="computer_name=garrard" 
   -var="pool_name=tf-pool" 
   -var="agent_name=agent-" 

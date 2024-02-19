@@ -14,3 +14,27 @@ provisioner "remote-exec" {
  ]
 }
 ```
+
+```hcl
+# resource "null_resource" "ssh_keygen" {
+#   provisioner "local-exec" {
+#     #-C \"garrardkitchen@gmail.com\"
+#     command = "ssh-keygen -t rsa -b 4096  -f ${path.module}/id_rsa -N ''"
+#   }
+# }
+
+# resource "azurerm_linux_virtual_machine_extension" "custom_script" {
+#   name                       = "${azurerm_linux_virtual_machine.vm.name}-custom-script"
+#   virtual_machine_id         = azurerm_linux_virtual_machine.vm.id
+#   publisher                  = "Microsoft.Azure.Extensions"
+#   type                       = "CustomScript"
+#   type_handler_version       = "2.1"
+
+#   settings = <<SETTINGS
+#     {
+#       "commandToExecute": "bash /path/to/your/script.sh"
+#     }
+#   SETTINGS
+# }
+
+```
